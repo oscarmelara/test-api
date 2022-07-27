@@ -8,10 +8,10 @@ router.post('/cars', [checkJwt], createCar)
 
 router.get('/cars', [checkJwt], getCars)
 
-router.put('/cars/:id', updateCar)
+router.put('/cars/:id', [checkJwt], updateCar)
 
-router.delete('/cars/:id', deleteCar)
+router.delete('/cars/:id', [checkJwt], deleteCar)
 
-router.get('/cars/:id', getCar)
+router.get('/cars/:id', [checkJwt], getCar)
 
 export default router
