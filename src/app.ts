@@ -12,7 +12,7 @@ import cookieParser from 'cookie-parser';
 
 const app = express()
 
-const whitelist = [process.env.ORIGIN , process.env.ORIGIN_PROD]
+const whitelist = [process.env.ORIGIN_DEV , process.env.ORIGIN_PROD]
 app.use(cors({
     origin: function (origin, callback) {
         console.log("origin", origin);
